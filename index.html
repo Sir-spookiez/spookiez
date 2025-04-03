@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> <!-- EmailJS Library -->
+</head>
+<body class="light-mode">
+  <header>
+    <div class="header-content">
+      <img src="images/Tyler.jpg" alt="Your Name" class="profile-image">
+      <button id="theme-toggle" class="theme-toggle">
+        <span id="sun-icon">🌞</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Hi, I'm Tyler, a passionate computer scientist, coder, and AI enthusiast who is just starting out his career.</p>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      I am currently a student doing web development with a passion for creating beautiful, user-friendly websites.
+      I specialize in front-end technologies such as HTML, CSS, and JavaScript, but I'm also comfortable working with back-end technologies such as PostgreSQL and FileZilla.
+      However, in the future, I would like to work as a neuroscientist researching and developing Artificial Intelligent limbs.
+    </p>
+  </section>
+
+  <!-- Featured Project Section -->
+  <section class="featured-project">
+    <h2>Featured Project</h2>
+    <div class="project">
+      <img src="path/to/featured-project-image.jpg" alt="Featured Project">
+      <div class="project-details">
+        <h3>This project is called:</h3>
+        <p>A description of the project, what technologies were used, and any special features.</p>
+        <a href="https://project-link.com" target="_blank">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- More Projects Section -->
+  <section class="more-projects">
+    <h2>Other Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <img src="path/to/project-image1.jpg" alt="Project 1">
+        <h3>Project 1</h3>
+        <a href="https://project-link1.com" target="_blank">View Project</a>
+      </div>
+      <div class="project">
+        <img src="path/to/project-image2.jpg" alt="Project 2">
+        <h3>Project 2</h3>
+        <a href="https://project-link2.com" target="_blank">View Project</a>
+      </div>
+      <div class="project">
+        <img src="path/to/project-image3.jpg" alt="Project 3">
+        <h3>Project 3</h3>
+        <a href="https://project-link3.com" target="_blank">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form"> <!-- Added ID to form -->
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="status-message"></p> <!-- Status message feedback -->
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Tyler. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle Dark/Light Mode
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const sunIcon = document.getElementById('sun-icon');
+
+    themeToggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      document.body.classList.toggle('light-mode');
+      
+      if (document.body.classList.contains('dark-mode')) {
+        sunIcon.textContent = '🌙';
+      } else {
+        sunIcon.textContent = '🌞';
+      }
+    });
+
+    // Initialize EmailJS with your Public Key
+    (function() {
+      emailjs.init("pb-R2ZEmJLExr7dCs"); // Replace with your actual Public ID
+    })();
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent page reload
+
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // Send email using EmailJS
+      emailjs.send("service_9ww9jih", "template_4utiu84", {
+        from_name: name,   // Matches {{from_name}} in EmailJS template
+        from_email: email, // Matches {{from_email}} in EmailJS template
+        message: message   // Matches {{message}} in EmailJS template
+      })
+      .then(function(response) {
+        document.getElementById('status-message').textContent = "Message sent successfully!";
+        document.getElementById('status-message').style.color = "green";
+        document.getElementById('contact-form').reset(); // Clear form after success
+      }, function(error) {
+        document.getElementById('status-message').textContent = "Failed to send message. Please try again.";
+        document.getElementById('status-message').style.color = "red";
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease;
+  }
+  
+  .profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .theme-toggle:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Light Mode */
+  body.light-mode {
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  header.light-mode {
+    background-color: #f8f9fa;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  header.dark-mode {
+    background-color: #222;
+  }
+  
+  /* Sections */
+  section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .hero {
+    background-color: #f1f1f1;
+    padding: 100px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .about, .more-projects {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about h2, .featured-project h2, .more-projects h2, .contact h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+  }
+  
+  /* Projects */
+  .featured-project, .more-projects {
+    background-color: #f9f9f9;
+  }
+  
+  .featured-project .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .featured-project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .more-projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .more-projects .project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .more-projects .project a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .more-projects .project a:hover {
+    color: #0056b3;
+  }
+  
+  /* Contact Form */
+  .contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .contact label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .contact input, .contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .contact button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5em;
+    }
+  
+    .hero p {
+      font-size: 1.1em;
+    }
+  
+    .more-projects .project-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+  
