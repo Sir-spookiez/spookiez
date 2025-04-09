@@ -1,0 +1,82 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(245, 245, 245);
+}
+header{
+    background-color: #0d487c;
+    color: #bbcaff;
+    float: left;
+    width: 100%;
+}
+header h1{
+    width: calc(100% - 20px);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+nav{
+    float: left;
+    width: 100%;
+}
+nav ul{
+    float: left;
+    width: 100%;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+nav li{
+    width: 20%;
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    display: inline;
+}
+nav a{
+    float: left;
+    width: calc(100% - 40px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    color: #bbcaff;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+nav a:visited{
+    color: #bbcaff;
+}
+nav a:hover{
+    background-color: #bbcaff;
+    color: #0d487c;
+}
+main{
+    float: left;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    color: #0d487c;
+    min-height: 150px;
+}
+footer{
+    background-color: #0d487c;
+    color: #bbcaff;
+    float: left;
+    width: 100%;
+}
+.dashboardResultBoxGreen{
+    background-color: rgb(90, 255, 190);
+    color: green;
+    border-radius: 10px;
+    float: left;
+    width: 25%;
+    margin-left: calc(25% / 4);
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}

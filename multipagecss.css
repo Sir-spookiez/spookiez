@@ -1,0 +1,239 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+}
+
+h1 {
+    color: #fff04c;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+}
+
+nav li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #df2b2b;
+    color: #000;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #c72b2b;
+    transform: scale(1.05);
+}
+
+table th td .inprogress {
+    background-color: #d79505 !important;
+    color: #fff !important;
+}
+
+
+table th td .failed{
+    background-color: #b83c3c !important; /* Header background color */
+    color: #fff !important; /* Header text color */
+}
+
+table th td .completed{
+    background-color: #01b71f !important; /* Header background color */
+    color: #fff !important; /* Header text color */
+}
+
+table {
+    width: 100%; /* Makes the table full-width */
+    border-collapse: collapse; /* Removes spacing between cells */
+    margin-top: 20px; /* Space above the table */
+}
+
+th, td {
+    padding: 15px; /* Adds padding for better spacing */
+    text-align: left; /* Aligns text to the left */
+    border: 1px solid #fff; /* Adds a border for table cells */
+}
+
+th {
+    background-color: #df2b2b; /* Header background color */
+    color: #fff; /* Header text color */
+}
+
+tr:nth-child(even) {
+    background-color: #555; /* Even row background color */
+}
+
+tr:nth-child(odd) {
+    background-color: #333; /* Odd row background color */
+}
+
+a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* No underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+
+main {
+    width: 100%;
+    max-width: 800px; /* Optional max-width for better layout */
+    margin: auto; /* Center main content */
+}
+
+
+
+footer {
+    margin-top: 30px;
+    color: #fff;
+}
+
+footer a {
+    color: #fff04c;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap-reverse; /* Allows the boxes to wrap into new rows */
+    justify-content: space-between; /* Space out the skill boxes */
+    margin-right: 140px; /* Center the container */
+    margin-left: 140px;
+}
+
+.skill {
+    width: calc(33.33% - 10px); /* Set width to approximately one-third minus some margin */
+    margin-bottom: 15px; /* Space between rows */
+    background-color: grey; /* Background color for skill boxes */
+    padding: 15px; /* Added padding for better spacing */
+    border-radius: 15px; /* Round corners */
+    color: #fff; /* Text color */
+    text-align: center; /* Center text */
+}
+
+/* Skills container fix */
+@media only screen and (max-width: 950px) {
+    .skill {
+        width: 100%; /* Full width on small screens */
+        margin-left: 0px; /* Reset margin */
+        margin-right: 0px; /* Reset margin */
+        margin-bottom: 10px; /* Add some space between skill boxes */
+    }
+
+    main{
+        width: 100%; /* Full width for main content */
+        margin: 0; /* Center content by removing unnecessary margins */
+        text-align: center;
+    }
+
+    /* Navigation fix */
+    nav li {
+        display: block; /* Stack the nav items vertically */
+        width: 100%; /* Full width of the container */
+        margin-top: 10px; /* Space between nav items */
+        text-align: center; /* Center-align the nav text */
+    }
+
+    nav a {
+        width: 100%; /* Ensure the nav buttons fill the width */
+        display: block; /* Make the nav buttons block elements */
+        margin: auto; /* Center the buttons */
+    }
+}
+
+
+/* Skills container fix */
+@media only screen and (max-width: 700px) {
+    .skill {
+        width: 100%; /* Full width on small screens */
+        margin-left: 0px; /* Reset margin */
+        margin-right: 0px; /* Reset margin */
+        margin-bottom: 10px; /* Add some space between skill boxes */
+    }
+
+    main{
+        width: 100%; /* Full width for main content */
+        margin: 0; /* Center content by removing unnecessary margins */
+        text-align: center;
+    }
+
+    /* Navigation fix */
+    nav li {
+        display: block; /* Stack the nav items vertically */
+        width: 100%; /* Full width of the container */
+        margin-top: 10px; /* Space between nav items */
+        text-align: center; /* Center-align the nav text */
+    }
+
+    nav a {
+        width: 100%; /* Ensure the nav buttons fill the width */
+        display: block; /* Make the nav buttons block elements */
+        margin: auto; /* Center the buttons */
+    }
+}
+
+
+/* Skills container fix */
+@media only screen and (max-width: 500px) {
+    .skill {
+        width: 100%; /* Full width on small screens */
+        margin-left: 0px; /* Reset margin */
+        margin-right: 0px; /* Reset margin */
+        margin-bottom: 10px; /* Add some space between skill boxes */
+    }
+
+    main{
+        width: 100%; /* Full width for main content */
+        margin: 0; /* Center content by removing unnecessary margins */
+        text-align: center;
+    }
+
+    /* Navigation fix */
+    nav li {
+        display: block; /* Stack the nav items vertically */
+        width: 100%; /* Full width of the container */
+        margin-top: 10px; /* Space between nav items */
+        text-align: center; /* Center-align the nav text */
+    }
+
+    nav a {
+        width: 100%; /* Ensure the nav buttons fill the width */
+        display: block; /* Make the nav buttons block elements */
+        margin: auto; /* Center the buttons */
+    }
+}
+
+
+
+
+

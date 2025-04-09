@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="multipagecss.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="default.ico" type="image/x-icon">
+    <title>Tyler Evetts</title>
+</head>
+<body>
+    <h1>Tyler Evetts</h1>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">HTML Projects</a></li>
+            <li><a href="my-skills.html">My Skills</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+    </nav>
+        <h2>Notice:</h2>
+        <p> This work is my own work, Any views and opinions expressed on this site are my own. I take responsibility for the content that i create and upload.</p>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p> © <span id="year"></span> Tyler Evetts</p>
+        <p><a href="disclaimer.html">View Disclaimer</a></p>
+    </footer>
+    
+    <script>
+        // JavaScript to dynamically set the current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
